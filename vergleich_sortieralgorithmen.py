@@ -80,7 +80,7 @@ if __name__ == "__main__":
     sizes = []
     
     for size in list_sizes:
-        for i in range(0,100): # jeweils 10 zufällige Listen pro Elementanzahl
+        for i in range(0,100): # jeweils 100 zufällige Listen pro Elementanzahl
             random_list = create_unique_list(size)
             _, quick_step_count = quick_sort(random_list.copy())
             _, merge_step_count = merge_sort(random_list.copy())
