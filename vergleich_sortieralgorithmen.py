@@ -99,19 +99,16 @@ if __name__ == "__main__":
     # Erstellen des Plots
     plt.rcParams.update({'font.family':'Comic Sans MS'})
     plt.rcParams.update({'font.size':'16'})
-    plt.figure(figsize=(16, 9))
-    plt.scatter(sizes, quick_steps, alpha=1, label='Quick Sort')
-    plt.scatter(sizes, merge_steps, alpha=1, label='Merge Sort')
+    plt.figure(figsize=(12, 9))
+    plt.scatter(sizes, quick_steps, alpha=0.5, s=60, label='Bubble Sort')
+    plt.plot(n_values, n_squared, '--', color = '#1F77B4', alpha=0.5, label='O(n^2) Zeitkomplexität Bubble Sort')
+    plt.scatter(sizes, merge_steps, alpha=0.5, s=60, label='Merge Sort')
     plt.plot(n_values, n_log_n, '--', color = '#FF7F0E', alpha=0.5, label='O(n log n) Zeitkomplexität Merge Sort')
-    plt.plot(n_values, n_squared, '--', color = '#1F77B4', alpha=0.5, label='O(n^2) Zeitkomplexität Quick Sort')
     plt.xscale('log')
     plt.yscale('log')
     plt.xlabel('Anzahl der Listenelemente')
     plt.ylabel('Anzahl der Vergleichsschritt')
-    plt.title('Vergleich der Vergleichsschritt zwischen Quick Sort und Merge Sort')
+    plt.title('Vergleich der Vergleichsschritt zwischen Bubble Sort und Merge Sort')
     plt.legend()
     plt.grid(True)
     plt.show()
-
-
-
